@@ -50,11 +50,3 @@ namespace NewGuessingGame
         }   
     }
 }
-for (int i = 0; i <= 2; i++)
-{
-    for (int j = 0; j <= 2; j++)
-    {
-        slotMachine[i, j] = rand.Next(3);
-        Console.Write(slotMachine[i, j]);
-
-    }
