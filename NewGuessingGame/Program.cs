@@ -11,42 +11,58 @@ namespace NewGuessingGame
             int secret;
             int counter;
 
-        // Introduction Text
-        start:
-            Console.Clear();
-            Console.WriteLine("Lets Play a Game....");
-            Console.WriteLine("Pick a number between 1 and 100");
+            // Introduction Text
+           DisplayWeclomeScreen();
 
             //Secret Number Created
             secret = rand.Next(100);
-            counter = 0;
+            
 
             //UserGuess Input
             //Game Loop With Count Limit 10 
-            while (counter< 10)
-                {
-                  
+            for (int i = 0; i < 10; i++)
+            {
+
                 guess = Int32.Parse(Console.ReadLine());
 
-                    if (secret > guess)
-                    {
-                        Console.WriteLine("Too Low");
-                    }
-                    else if (secret < guess)
+                if (secret > guess)
+                {
+                    Console.WriteLine("Too Low");
+                }
+                else
+                {
+                    if (secret < guess)
                     {
                         Console.WriteLine("Too High");
                     }
                     else
                     {
                         Console.WriteLine("Great Job!!! You Guessed it!!");
-                    goto start;
+
+                        DisplayWeclomeScreen();
+                        secret = rand.Next(100);       //reinitialize game
+                        counter = 0;                   //reinitialize game
+
                     
+
                     }
-                    counter++;
                 }
+
+              
+            }
             Console.WriteLine("You Lose");
-            
-                
-        }   
+
+
+        }
+
+        static void DisplayWeclomeScreen()
+        {
+          
+            Console.Clear();
+            Console.WriteLine("Lets Play a Game....");
+            Console.WriteLine("Pick a number between 1 and 100");
+        }
+
+        
     }
 }
