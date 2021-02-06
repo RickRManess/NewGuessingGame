@@ -12,11 +12,11 @@ namespace NewGuessingGame
             int counter;
 
             // Introduction Text
-           DisplayWelcomeScreen();
+            DisplayWelcomeScreen();
 
             //Secret Number Created
             secret = rand.Next(100);
-            
+
 
             //UserGuess Input
             //Game Loop With Count Limit 10 
@@ -41,27 +41,22 @@ namespace NewGuessingGame
 
                         DisplayWelcomeScreen();
                         secret = rand.Next(100);       //reinitialize game
-                        counter = 0;                   //reinitialize game
-
-                    
-
+                       
                     }
-                }
 
+                }
             }
             Console.WriteLine("You Lose");
-
-
         }
 
         static void DisplayWelcomeScreen()
         {
-          
+
             Console.Clear();
             Console.WriteLine("Lets Play a Game....");
             Console.WriteLine("Pick a number between 1 and 100");
         }
 
-        
+
     }
 }
