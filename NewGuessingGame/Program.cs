@@ -12,7 +12,7 @@ namespace NewGuessingGame
             int counter;
 
             // Introduction Text
-           DisplayWeclomeScreen();
+           DisplayWelcomeScreen();
 
             //Secret Number Created
             secret = rand.Next(100);
@@ -39,7 +39,7 @@ namespace NewGuessingGame
                     {
                         Console.WriteLine("Great Job!!! You Guessed it!!");
 
-                        DisplayWeclomeScreen();
+                        DisplayWelcomeScreen();
                         secret = rand.Next(100);       //reinitialize game
                         counter = 0;                   //reinitialize game
 
@@ -48,14 +48,13 @@ namespace NewGuessingGame
                     }
                 }
 
-              
             }
             Console.WriteLine("You Lose");
 
 
         }
 
-        static void DisplayWeclomeScreen()
+        static void DisplayWelcomeScreen()
         {
           
             Console.Clear();
